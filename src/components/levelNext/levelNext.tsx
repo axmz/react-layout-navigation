@@ -19,7 +19,7 @@ const LevelNext: React.FC<Props> = ({
     }
     // ctrl+k
     if (!e.shiftKey && e.ctrlKey && e.keyCode === 75) {
-      sameLevelMove(e, +1, handlerProps)
+      sameLevelMove(e, -1, handlerProps)
       return
     }
     // enter / ctrl+l
