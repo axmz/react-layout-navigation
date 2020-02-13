@@ -1,3 +1,3 @@
-export { default as handlers } from './handlers';
-export { default as components } from './components/';
+export * from './handlers';
+export * from './components/';
 //# sourceMappingURL=index.d.ts.map

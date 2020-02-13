@@ -12,8 +12,8 @@
 <!-- one more level for <select>   -->
 <!-- change click simulator -->
 <!-- add arrows   -->
-full screen simulate  
-change tabs simulate/how to insall  
+<!-- full screen simulate   -->
+<!-- change tabs simulate/how to insall   -->
 <!-- try to avoid ref and see what happens   -->
 <!-- is ref necessary?   -->
 <!-- try to return in hotkeys example   -->
@@ -26,10 +26,10 @@ change tabs simulate/how to insall
 <!-- fix click sim   -->
 <!-- put stopPropagation validation to every handler   -->
 <!-- breakdown styles -->
-fix menu lines  
+<!-- fix menu lines   -->
 <!-- fix switch enter error   -->
 temporary fix for stopPropagation. find another solution  
 <!-- implement global handler in wraper?   -->
 documentation  
-publish  
+<!-- publish   -->
 
