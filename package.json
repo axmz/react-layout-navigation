@@ -12,7 +12,7 @@
   },
   "scripts": {
     "publish:npm": " rm -rf dist && mkdir dist && set NODE_ENV=production && babel src -d dist --copy-files --source-maps  --extensions .ts,.tsx",
-    "compile":"tsc"
+    "compile": "tsc"
   },
   "browserslist": {
     "production": [

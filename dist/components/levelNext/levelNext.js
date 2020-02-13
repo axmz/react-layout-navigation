@@ -30,7 +30,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = __importStar(require("react"));
-var handlers_1 = require("../../../../handlers");
+var handlers_1 = require("../../handlers");
 var LevelNext = function (_a) {
     var component = _a.component, children = _a.children, stopPropagation = _a.stopPropagation, preventDefault = _a.preventDefault, callback = _a.callback, otherProps = __rest(_a, ["component", "children", "stopPropagation", "preventDefault", "callback"]);
     var ref = react_1.useRef(null);

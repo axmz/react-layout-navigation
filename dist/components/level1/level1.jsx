@@ -1,15 +1,4 @@
 "use strict";
-var __assign = (this && this.__assign) || function () {
-    __assign = Object.assign || function(t) {
-        for (var s, i = 1, n = arguments.length; i < n; i++) {
-            s = arguments[i];
-            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-                t[p] = s[p];
-        }
-        return t;
-    };
-    return __assign.apply(this, arguments);
-};
 var __rest = (this && this.__rest) || function (s, e) {
     var t = {};
     for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
@@ -29,13 +18,13 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var react_1 = __importStar(require("react"));
-var handlers_1 = require("../../handlers");
-var Level1 = function (_a) {
-    var component = _a.component, children = _a.children, preventDefault = _a.preventDefault, stopPropagation = _a.stopPropagation, callback = _a.callback, otherProps = __rest(_a, ["component", "children", "preventDefault", "stopPropagation", "callback"]);
-    var ref = react_1.useRef(null);
-    var handlerProps = { preventDefault: preventDefault, callback: callback, stopPropagation: stopPropagation };
-    var handler = react_1.useCallback(function (e) {
+const react_1 = __importStar(require("react"));
+const handlers_1 = require("../../handlers");
+const Level1 = (_a) => {
+    var { component, children, preventDefault, stopPropagation, callback } = _a, otherProps = __rest(_a, ["component", "children", "preventDefault", "stopPropagation", "callback"]);
+    const ref = react_1.useRef(null);
+    const handlerProps = { preventDefault, callback, stopPropagation };
+    const handler = react_1.useCallback((e) => {
         // enter / ctrl+l
         if ((e.keyCode === 13 && !e.ctrlKey) ||
             (!e.shiftKey && e.ctrlKey && e.keyCode === 76)) {
@@ -48,19 +37,19 @@ var Level1 = function (_a) {
             return;
         }
     }, []);
-    react_1.useEffect(function () {
-        var app = ref.current;
+    react_1.useEffect(() => {
+        const app = ref.current;
         if (app) {
             app.focus();
             app.addEventListener("keydown", handler);
         }
-        return function () {
+        return () => {
             var _a;
             (_a = app) === null || _a === void 0 ? void 0 : _a.removeEventListener("keydown", handler);
         };
     }, [ref, handler]);
-    var c = component ? component : "div";
-    return react_1.default.createElement(c, __assign({ ref: ref, "data-level": 1 }, otherProps), children);
+    let c = component ? component : "div";
+    return react_1.default.createElement(c, Object.assign({ ref, "data-level": 1 }, otherProps), children);
 };
 exports.default = Level1;
-//# sourceMappingURL=level1.js.map
+//# sourceMappingURL=level1.jsx.map
