@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { WithLevel, Props, baseLevelMove} from "../../handlers";
+import { WithLevel, Props, baseLevelMove } from "../../handlers";
 
 const Wrapper: React.FC<Props> = ({
   component,
@@ -14,34 +14,34 @@ const Wrapper: React.FC<Props> = ({
 
   const handler = (e: KeyboardEvent) => {
     // tab
-    if (e.keyCode === 9 && e.shiftKey) {
-      baseLevelMove(e, -1, props)
-      return
+    if (e.keyCode === 9 && !e.shiftKey) {
+      baseLevelMove(e, +1, props);
+      return;
     }
     // shift+tab
-    if (e.keyCode === 9 && !e.shiftKey ) {
-      baseLevelMove(e, +1, props)
-      return
+    if (e.keyCode === 9 && e.shiftKey) {
+      baseLevelMove(e, -1, props);
+      return;
     }
     // ctrl+j DO NOTHING
     if (!e.shiftKey && e.ctrlKey && e.keyCode === 74) {
-      e.preventDefault()
-      return
+      e.preventDefault();
+      return;
     }
     // ctrl+k DO NOTHING
     if (!e.shiftKey && e.ctrlKey && e.keyCode === 75) {
-      e.preventDefault()
-      return
+      e.preventDefault();
+      return;
     }
     // ctrl+h DO NOTHING
     if (!e.shiftKey && e.ctrlKey && e.keyCode === 72) {
-      e.preventDefault()
-      return
+      e.preventDefault();
+      return;
     }
     // ctrl+l DO NOTHING
     if (!e.shiftKey && e.ctrlKey && e.keyCode === 76) {
-      e.preventDefault()
-      return
+      e.preventDefault();
+      return;
     }
   };
 

@@ -32,7 +32,7 @@ const LevelNext = (_a) => {
         }
         // ctrl+k
         if (!e.shiftKey && e.ctrlKey && e.keyCode === 75) {
-            handlers_1.sameLevelMove(e, +1, handlerProps);
+            handlers_1.sameLevelMove(e, -1, handlerProps);
             return;
         }
         // enter / ctrl+l

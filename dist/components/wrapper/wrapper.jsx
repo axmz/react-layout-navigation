@@ -26,13 +26,13 @@ const Wrapper = (_a) => {
     const props = { preventDefault, callback, stopPropagation };
     const handler = (e) => {
         // tab
-        if (e.keyCode === 9 && e.shiftKey) {
-            handlers_1.baseLevelMove(e, -1, props);
+        if (e.keyCode === 9 && !e.shiftKey) {
+            handlers_1.baseLevelMove(e, +1, props);
             return;
         }
         // shift+tab
-        if (e.keyCode === 9 && !e.shiftKey) {
-            handlers_1.baseLevelMove(e, +1, props);
+        if (e.keyCode === 9 && e.shiftKey) {
+            handlers_1.baseLevelMove(e, -1, props);
             return;
         }
         // ctrl+j DO NOTHING
