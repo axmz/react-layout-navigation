@@ -1,14 +1,12 @@
 {
   "name": "react-layout-navigation",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": false,
   "main": "dist/index.ts",
   "types": "dist/index.d.ts",
   "dependencies": {
     "@types/react": "^16.9.19",
-    "@types/react-dom": "^16.9.5",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
   },
   "scripts": {
     "publish:npm": " rm -rf dist && mkdir dist && set NODE_ENV=production && babel src -d dist --copy-files --source-maps  --extensions .ts,.tsx",
