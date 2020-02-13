@@ -1,0 +1,1 @@
+{"version":3,"file":"handlerPropsValidation.js","sourceRoot":"","sources":["../../src/handlers/handlerPropsValidation.ts"],"names":[],"mappings":";;AAEA,SAAwB,sBAAsB,CAAE,CAAM,EAAE,YAA0B;IAChF,IAAI,YAAY,CAAC,cAAc,KAAK,KAAK,EAAE;KAC1C;SAAM;QACL,CAAC,CAAC,cAAc,EAAE,CAAC;KACpB;IACD,IAAI,YAAY,CAAC,eAAe,KAAK,IAAI,EAAE;QACzC,CAAC,CAAC,eAAe,EAAE,CAAC;KACrB;AACH,CAAC;AARD,yCAQC"}
