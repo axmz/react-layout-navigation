@@ -17,7 +17,7 @@ Level1+
 - C^k - prev
 - C^l - into
 - C^h - up
-- Enter - into
+- Enter - into / custom
 - Esc - up
 
 RLN can be adjusted to use only Tab, Shift+Tab, Enter and Esc
