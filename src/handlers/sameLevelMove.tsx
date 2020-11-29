@@ -6,6 +6,7 @@ export default function sameLevelMove(
   step: -1 | 1,
   handlerProps: HandlerProps,
 ) {
+  e.stopPropagation()
   handlerPropsValidation(e, handlerProps)
   const currentEl: WithLevel = e.target;
   let currentLevel: number = parseInt(currentEl.dataset.level);
@@ -26,7 +27,7 @@ export default function sameLevelMove(
     nextIdx = currentIdx + step;
   }
   const nextElement = tabbables[nextIdx] as WithLevel;
-  if (nextElement){
+  if (nextElement) {
     nextElement.focus();
   }
 }

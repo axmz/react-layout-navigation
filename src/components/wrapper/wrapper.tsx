@@ -23,26 +23,26 @@ const Wrapper: React.FC<Props> = ({
       baseLevelMove(e, -1, props);
       return;
     }
-    // ctrl+j DO NOTHING
-    if (!e.shiftKey && e.ctrlKey && e.keyCode === 74) {
-      e.preventDefault();
-      return;
-    }
-    // ctrl+k DO NOTHING
-    if (!e.shiftKey && e.ctrlKey && e.keyCode === 75) {
-      e.preventDefault();
-      return;
-    }
-    // ctrl+h DO NOTHING
-    if (!e.shiftKey && e.ctrlKey && e.keyCode === 72) {
-      e.preventDefault();
-      return;
-    }
-    // ctrl+l DO NOTHING
-    if (!e.shiftKey && e.ctrlKey && e.keyCode === 76) {
-      e.preventDefault();
-      return;
-    }
+    // // ctrl+j DO NOTHING
+    // if (!e.shiftKey && e.ctrlKey && e.keyCode === 74) {
+    //   e.preventDefault();
+    //   return;
+    // }
+    // // ctrl+k DO NOTHING
+    // if (!e.shiftKey && e.ctrlKey && e.keyCode === 75) {
+    //   e.preventDefault();
+    //   return;
+    // }
+    // // ctrl+h DO NOTHING
+    // if (!e.shiftKey && e.ctrlKey && e.keyCode === 72) {
+    //   e.preventDefault();
+    //   return;
+    // }
+    // // ctrl+l DO NOTHING
+    // if (!e.shiftKey && e.ctrlKey && e.keyCode === 76) {
+    //   e.preventDefault();
+    //   return;
+    // }
   };
 
   useEffect(() => {

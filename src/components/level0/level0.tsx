@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import { WithLevel, Props, levelBelowMove, levelsMove, HandlerProps } from "../../handlers";
+import { WithLevel, Props, levelBelowMove, levelsMove, HandlerProps, sameLevelMove } from "../../handlers";
 
 const Level0: React.FC<Props> = ({
   component,
@@ -13,16 +13,29 @@ const Level0: React.FC<Props> = ({
   const handlerProps: HandlerProps = { preventDefault, callback, stopPropagation };
 
   const handler = (e: KeyboardEvent) => {
-    // ctrl+j
-    if (!e.shiftKey && e.ctrlKey && e.keyCode === 74) {
-      levelBelowMove(e, +1, handlerProps)
-      return
+
+    // tab
+    if (e.keyCode === 9 && !e.shiftKey) {
+      sameLevelMove(e, +1, handlerProps)
+      return;
     }
-    // ctrl+k
-    if (!e.shiftKey && e.ctrlKey && e.keyCode === 75) {
-      levelBelowMove(e, -1, handlerProps)
-      return
+    // shift+tab
+    if (e.keyCode === 9 && e.shiftKey) {
+      sameLevelMove(e, -1, handlerProps)
+      return;
     }
+
+    // // ctrl+j
+    // if (!e.shiftKey && e.ctrlKey && e.keyCode === 74) {
+    //   levelBelowMove(e, +1, handlerProps)
+    //   return
+    // }
+    // // ctrl+k
+    // if (!e.shiftKey && e.ctrlKey && e.keyCode === 75) {
+    //   levelBelowMove(e, -1, handlerProps)
+    //   return
+    // }
+
     // enter / ctrl+l
     if ((e.keyCode === 13 && !e.ctrlKey) || (!e.shiftKey && e.ctrlKey && e.keyCode === 76)) {
       levelsMove(e, +1, handlerProps)

@@ -3,7 +3,9 @@ import {
   WithLevel,
   Props,
   WithAttributes,
-  levelsMove
+  levelsMove,
+  levelBelowMove,
+  sameLevelMove
 } from "../../handlers";
 
 const Level1: React.FC<Props> = ({
@@ -18,11 +20,21 @@ const Level1: React.FC<Props> = ({
   const handlerProps = { preventDefault, callback, stopPropagation };
   const handler = useCallback(
     (e: KeyboardEvent) => {
+      // tab
+      if (e.keyCode === 9 && !e.shiftKey) {
+        sameLevelMove(e, +1, handlerProps)
+        return;
+      }
+      // shift+tab
+      if (e.keyCode === 9 && e.shiftKey) {
+        sameLevelMove(e, -1, handlerProps)
+        return;
+      }
       // enter / ctrl+l
       if (
         (e.keyCode === 13 && !e.ctrlKey) ||
         (!e.shiftKey && e.ctrlKey && e.keyCode === 76)
-        ) {
+      ) {
         levelsMove(e, +1, handlerProps);
         return;
       }

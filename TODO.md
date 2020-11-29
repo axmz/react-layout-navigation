@@ -35,3 +35,4 @@ documentation
 check if baselevel can replace wrapper, level0 and level1  
 <!-- levelNext doesn't work as intended. problem is with stoppropagation   -->
 ARIA
+add d.ts https://marcobotto.com/blog/compiling-and-bundling-typescript-libraries-with-webpack/
